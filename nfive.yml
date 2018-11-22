@@ -1,0 +1,15 @@
+name: NFive/plugin-metrics
+version: 1.0.0
+description: Metric logging with Elasticsearch
+author: NFive
+license: LGPL
+server:
+  main:
+    - NFive.Metrics.Server
+  include:
+    - NFive.Metrics.Shared
+client:
+  main:
+    - NFive.Metrics.Client
+  include:
+    - NFive.Metrics.Shared
