@@ -8,6 +8,7 @@ server:
     - NFive.Metrics.Server
   include:
     - NFive.Metrics.Shared
+    - Elasticsearch
 client:
   main:
     - NFive.Metrics.Client
