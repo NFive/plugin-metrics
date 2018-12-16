@@ -19,9 +19,9 @@ namespace NFive.Metrics.Server
 		{
 			this.client = new ElasticLowLevelClient(new ConnectionConfiguration(new Uri($"http://{this.Configuration.Host}:{this.Configuration.Port}")));
 
-			this.Events.On<object>("metric", async data => await this.Store(data));
+			this.Events.On<object>("metric", async data => await Store(data));
 
-			this.Rpc.Event("metric").On(new Action<IRpcEvent, object>(async (e, data) => await this.Store(data)));
+			this.Rpc.Event("metric").On(new Action<IRpcEvent, object>(async (e, data) => await Store(data)));
 		}
 
 		private async Task Store(object data)
