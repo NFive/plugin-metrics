@@ -7,6 +7,7 @@ using NFive.SDK.Server.Events;
 using NFive.SDK.Server.Rpc;
 using System;
 using System.Threading.Tasks;
+using NFive.SDK.Server.Rcon;
 
 namespace NFive.Metrics.Server
 {
@@ -15,7 +16,7 @@ namespace NFive.Metrics.Server
 	{
 		private readonly ElasticLowLevelClient client;
 
-		public MetricsController(ILogger logger, IEventManager events, IRpcHandler rpc, Configuration configuration) : base(logger, events, rpc, configuration)
+		public MetricsController(ILogger logger, IEventManager events, IRpcHandler rpc, IRconManager rcon, Configuration configuration) : base(logger, events, rpc, rcon, configuration)
 		{
 			this.client = new ElasticLowLevelClient(new ConnectionConfiguration(new Uri($"http://{this.Configuration.Host}:{this.Configuration.Port}")));
 
