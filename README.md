@@ -1,14 +1,14 @@
-# NFive Metrics
+# NFive Metrics Plugin
+[![License](https://img.shields.io/github/license/NFive/plugin-metrics.svg)](LICENSE)
+[![Build Status](https://img.shields.io/appveyor/ci/NFive/plugin-metrics/master.svg)](https://ci.appveyor.com/project/NFive/plugin-metrics)
+[![Release Version](https://img.shields.io/github/release/NFive/plugin-metrics/all.svg)](https://github.com/NFive/plugin-metrics/releases)
+
 Metric logging with Elasticsearch.
 
 This plugin connects to an Elasticsearch server and allows other plugins to easily store metrics. Requires an Elasticsearch 6.x server.
 
 ## Installation
-It is recommended to install this plugin into your plugin with nfpm.
-
-```bash
-nfpm install NFive/plugin-metrics
-```
+Install the plugin into your server from the [NFive Hub](https://hub.nfive.io/NFive/plugin-debug): `nfpm install NFive/plugin-debug`
 
 Once installed, add a reference to `NFive.Metrics.Shared.net.dll` to your plugin's project(s).
 

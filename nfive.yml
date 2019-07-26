@@ -2,7 +2,8 @@ name: NFive/plugin-metrics
 version: 0.1.2
 description: Metric logging with Elasticsearch
 author: NFive
-license: LGPL
+website: https://nfive.io/
+license: LGPL-3.0-or-later
 server:
   main:
     - NFive.Metrics.Server
